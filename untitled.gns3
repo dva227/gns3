@@ -1378,6 +1378,37 @@
                 "vm_id": "f38b124e-8003-4b8b-9b28-6572a3ea5a0c",
                 "x": -96.63961030678925,
                 "y": -460.40620433565937
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 33,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "ubuntu 12",
+                    "x": 0.0,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "id": 334,
+                        "name": "Ethernet0",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "console": 2013,
+                    "name": "ubuntu 12",
+                    "ram": 512,
+                    "vmname": "ubuntu 12"
+                },
+                "server_id": 2,
+                "type": "VirtualBoxVM",
+                "vm_id": "1ba84904-a4c1-4c56-a6c2-d46318c3932d",
+                "x": -791.9326829943519,
+                "y": -16.772077938642145
             }
         ],
         "servers": [
