@@ -697,7 +697,7 @@
                 "properties": {
                     "adapters": 2,
                     "console": 2008,
-                    "enable_remote_console": true,
+                    "headless": true,
                     "name": "tonfisk",
                     "ram": 512,
                     "use_any_adapter": true,
@@ -743,6 +743,7 @@
                 "properties": {
                     "adapters": 2,
                     "console": 2003,
+                    "headless": true,
                     "name": "sill",
                     "ram": 512,
                     "use_any_adapter": true,
