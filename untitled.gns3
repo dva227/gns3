@@ -938,7 +938,7 @@
                 ],
                 "properties": {
                     "console": 2004,
-                    "disk0": 0,
+                    "disk0": 64,
                     "idlepc": "0x60aa5f14",
                     "image": "c3745-adventerprisek9-mz.124-25.image",
                     "mac_addr": "c403.2f23.0000",
@@ -1095,7 +1095,7 @@
                 ],
                 "properties": {
                     "console": 2005,
-                    "disk0": 0,
+                    "disk0": 64,
                     "idlepc": "0x60aa5f14",
                     "image": "c3745-adventerprisek9-mz.124-25.image",
                     "mac_addr": "c404.2f36.0000",
@@ -1243,7 +1243,7 @@
                 ],
                 "properties": {
                     "console": 2006,
-                    "disk0": 0,
+                    "disk0": 64,
                     "idlepc": "0x60aa5f14",
                     "image": "c3745-adventerprisek9-mz.124-25.image",
                     "mac_addr": "c405.2f4a.0000",
@@ -1391,7 +1391,7 @@
                 ],
                 "properties": {
                     "console": 2007,
-                    "disk0": 0,
+                    "disk0": 64,
                     "idlepc": "0x60aa5f14",
                     "image": "c3745-adventerprisek9-mz.124-25.image",
                     "mac_addr": "c406.2f59.0000",
