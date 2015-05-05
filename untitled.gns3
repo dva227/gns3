@@ -475,6 +475,28 @@
                     "x": 32.27202058146874,
                     "y": 72.00699879810284
                 }
+            },
+            {
+                "description": "Link from ubuntu 13 Clone port Ethernet0 to ESW3 port FastEthernet1/14",
+                "destination_node_id": 24,
+                "destination_port_id": 296,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/14",
+                    "x": 16.948943799730614,
+                    "y": 58.63828045713656
+                },
+                "id": 27,
+                "source_node_id": 65,
+                "source_port_id": 528,
+                "source_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "e0",
+                    "x": 48.551056200269386,
+                    "y": -7.13828045713656
+                }
             }
         ],
         "nodes": [
@@ -1277,8 +1299,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to ubuntu 13 Clone on port Ethernet0",
                         "id": 296,
+                        "link_id": 27,
                         "name": "FastEthernet1/14",
+                        "nio": "NIO_UDP",
                         "port_number": 14
                     },
                     {
@@ -1712,8 +1737,43 @@
                 "server_id": 2,
                 "type": "VirtualBoxVM",
                 "vm_id": "002e9f1b-1302-4890-a75f-d5e55e9e1f42",
-                "x": -707.0798692519662,
-                "y": 107.67871555019022
+                "x": -762.2341981845169,
+                "y": 55.352813742385706
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 65,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "ubuntu 13 Clone",
+                    "x": -17.0,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to ESW3 on port FastEthernet1/14",
+                        "id": 528,
+                        "link_id": 27,
+                        "name": "Ethernet0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "console": 2014,
+                    "name": "ubuntu 13 Clone",
+                    "ram": 512,
+                    "use_any_adapter": true,
+                    "vmname": "ubuntu 13 Clone"
+                },
+                "server_id": 2,
+                "type": "VirtualBoxVM",
+                "vm_id": "9c740073-730f-445c-aa23-aca489ce2d3b",
+                "x": -588.2859300126263,
+                "y": 131.72034611053286
             }
         ],
         "servers": [
