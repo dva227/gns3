@@ -205,28 +205,6 @@
                 }
             },
             {
-                "description": "Link from eth2 port nio_gen_eth:eth2 to ESW2 port FastEthernet1/2",
-                "destination_node_id": 23,
-                "destination_port_id": 266,
-                "destination_port_label": {
-                    "color": "#000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f1/2",
-                    "x": 64.48531961235417,
-                    "y": -2.6713325320685897
-                },
-                "id": 10,
-                "source_node_id": 28,
-                "source_port_id": 325,
-                "source_port_label": {
-                    "color": "#000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "nio_gen_eth:eth2",
-                    "x": 32.27202058146874,
-                    "y": 72.00699879810284
-                }
-            },
-            {
                 "description": "Link from ESW2 port FastEthernet1/0 to ESW4 port FastEthernet0/0",
                 "destination_node_id": 25,
                 "destination_port_id": 316,
@@ -452,6 +430,50 @@
                     "text": "e1",
                     "x": -7.433115284536527,
                     "y": 27.187792467810254
+                }
+            },
+            {
+                "description": "Link from ubuntu 13 port Ethernet0 to ESW3 port FastEthernet1/15",
+                "destination_node_id": 24,
+                "destination_port_id": 297,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/15",
+                    "x": 2.271148816104983,
+                    "y": 47.6073759865792
+                },
+                "id": 25,
+                "source_node_id": 64,
+                "source_port_id": 526,
+                "source_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "e0",
+                    "x": 70.9110639798688,
+                    "y": -2.509219983224
+                }
+            },
+            {
+                "description": "Link from eth2 port nio_gen_linux:eth2 to ESW2 port FastEthernet1/2",
+                "destination_node_id": 23,
+                "destination_port_id": 266,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/2",
+                    "x": 64.48531961235417,
+                    "y": -2.6713325320685897
+                },
+                "id": 26,
+                "source_node_id": 28,
+                "source_port_id": 527,
+                "source_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "nio_gen_linux:eth2",
+                    "x": 32.27202058146874,
+                    "y": 72.00699879810284
                 }
             }
         ],
@@ -1029,11 +1051,11 @@
                     },
                     {
                         "adapter_number": 1,
-                        "description": "connected to eth2 on port nio_gen_eth:eth2",
+                        "description": "connected to eth2 on port nio_gen_linux:eth2",
                         "id": 266,
-                        "link_id": 10,
+                        "link_id": 26,
                         "name": "FastEthernet1/2",
-                        "nio": "NIO_Generic_Ethernet",
+                        "nio": "NIO_Linux_Ethernet",
                         "port_number": 2
                     },
                     {
@@ -1261,8 +1283,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to ubuntu 13 on port Ethernet0",
                         "id": 297,
+                        "link_id": 25,
                         "name": "FastEthernet1/15",
+                        "nio": "NIO_UDP",
                         "port_number": 15
                     },
                     {
@@ -1494,17 +1519,17 @@
                 "ports": [
                     {
                         "description": "connected to ESW2 on port FastEthernet1/2",
-                        "id": 325,
-                        "link_id": 10,
-                        "name": "nio_gen_eth:eth2",
-                        "nio": "NIO_Generic_Ethernet",
+                        "id": 527,
+                        "link_id": 26,
+                        "name": "nio_gen_linux:eth2",
+                        "nio": "NIO_Linux_Ethernet",
                         "stub": true
                     }
                 ],
                 "properties": {
                     "name": "eth2",
                     "nios": [
-                        "nio_gen_eth:eth2"
+                        "nio_gen_linux:eth2"
                     ]
                 },
                 "server_id": 2,
@@ -1655,6 +1680,40 @@
                 "vm_id": "ccc06b46-3e88-49b3-9ac1-5edd70e59994",
                 "x": -752.8347032479053,
                 "y": -454.74935008616706
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 64,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "ubuntu 13",
+                    "x": 0.0,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to ESW3 on port FastEthernet1/15",
+                        "id": 526,
+                        "link_id": 25,
+                        "name": "Ethernet0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "console": 2013,
+                    "name": "ubuntu 13",
+                    "ram": 512,
+                    "vmname": "ubuntu 13"
+                },
+                "server_id": 2,
+                "type": "VirtualBoxVM",
+                "vm_id": "002e9f1b-1302-4890-a75f-d5e55e9e1f42",
+                "x": -691.5235200658622,
+                "y": 124.64927829866735
             }
         ],
         "servers": [
