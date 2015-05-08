@@ -445,6 +445,58 @@
                     "x": 67.52203511953866,
                     "y": 42.20467993325656
                 }
+            },
+            {
+                "description": "Link from ubuntu 13 port Ethernet0 to S3 port FastEthernet1/15",
+                "destination_node_id": 74,
+                "destination_port_id": 676,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/15",
+                    "x": -4.01960102387045,
+                    "y": 37.1508791835145
+                },
+                "id": 31,
+                "source_node_id": 64,
+                "source_port_id": 724,
+                "source_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "e0",
+                    "x": 69.51960102387045,
+                    "y": 14.34912081648551
+                }
+            },
+            {
+                "description": "Link from win 7 port Ethernet0 to S3 port FastEthernet1/11",
+                "destination_node_id": 74,
+                "destination_port_id": 672,
+                "id": 33,
+                "source_node_id": 87,
+                "source_port_id": 725
+            },
+            {
+                "description": "Link from win 7 port Ethernet0 to S3 port FastEthernet1/12",
+                "destination_node_id": 74,
+                "destination_port_id": 673,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/12",
+                    "x": 56.15869886285407,
+                    "y": 54.614025617510634
+                },
+                "id": 34,
+                "source_node_id": 87,
+                "source_port_id": 725,
+                "source_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "e0",
+                    "x": 9.341301137145877,
+                    "y": -3.1140256175106344
+                }
             }
         ],
         "nodes": [
@@ -508,8 +560,11 @@
                 "ports": [
                     {
                         "adapter_number": 0,
-                        "id": 526,
+                        "description": "connected to S3 on port FastEthernet1/15",
+                        "id": 724,
+                        "link_id": 31,
                         "name": "Ethernet0",
+                        "nio": "NIO_UDP",
                         "port_number": 0
                     }
                 ],
@@ -517,6 +572,7 @@
                     "console": 2013,
                     "name": "ubuntu 13",
                     "ram": 512,
+                    "use_any_adapter": true,
                     "vmname": "ubuntu 13"
                 },
                 "server_id": 2,
@@ -554,8 +610,8 @@
                 "server_id": 2,
                 "type": "VirtualBoxVM",
                 "vm_id": "2ee91b2a-51fe-42a3-b8c4-c9bd5dfcfb50",
-                "x": -588.2859300126263,
-                "y": 131.72034611053286
+                "x": -654.7539674441616,
+                "y": 135.96298679765212
             },
             {
                 "description": "Router c7200",
@@ -904,8 +960,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to win 7 on port Ethernet0",
                         "id": 673,
+                        "link_id": 34,
                         "name": "FastEthernet1/12",
+                        "nio": "NIO_UDP",
                         "port_number": 12
                     },
                     {
@@ -922,14 +981,17 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to ubuntu 13 on port Ethernet0",
                         "id": 676,
+                        "link_id": 31,
                         "name": "FastEthernet1/15",
+                        "nio": "NIO_UDP",
                         "port_number": 15
                     }
                 ],
                 "properties": {
                     "console": 2006,
-                    "disk0": 0,
+                    "disk0": 512,
                     "idlepc": "0x60aa7470",
                     "image": "c3745-adventerprisek9-mz.124-25.image",
                     "mac_addr": "c405.1370.0000",
@@ -1151,8 +1213,8 @@
                 "server_id": 2,
                 "type": "VirtualBoxVM",
                 "vm_id": "ab05141d-4388-43f0-acee-7dc2c7098390",
-                "x": -753.8624817342637,
-                "y": -155.0046173579947
+                "x": -772.247258045114,
+                "y": -180.46046148071034
             },
             {
                 "description": "Router c7200",
@@ -1637,6 +1699,41 @@
                 "vm_id": "9aaed320-ca6c-4ae4-8a35-e30d21556725",
                 "x": -752.8347032479053,
                 "y": -454.74935008616706
+            },
+            {
+                "description": "VirtualBox VM",
+                "id": 87,
+                "label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "win 7",
+                    "x": 14.0,
+                    "y": -25.0
+                },
+                "linked_clone": false,
+                "ports": [
+                    {
+                        "adapter_number": 0,
+                        "description": "connected to S3 on port FastEthernet1/12",
+                        "id": 725,
+                        "link_id": 34,
+                        "name": "Ethernet0",
+                        "nio": "NIO_UDP",
+                        "port_number": 0
+                    }
+                ],
+                "properties": {
+                    "console": 2004,
+                    "name": "win 7",
+                    "ram": 1024,
+                    "use_any_adapter": true,
+                    "vmname": "win 7"
+                },
+                "server_id": 2,
+                "type": "VirtualBoxVM",
+                "vm_id": "8b0c725b-6fb4-49b9-9372-065a39a58547",
+                "x": -459.5924958366747,
+                "y": 148.69090885900997
             }
         ],
         "servers": [
