@@ -585,8 +585,8 @@
                 "server_id": 2,
                 "type": "VirtualBoxVM",
                 "vm_id": "fd6d5e3d-af1f-4e7a-981c-6458030bdaf2",
-                "x": -762.2341981845169,
-                "y": 55.352813742385706
+                "x": -758.234198184517,
+                "y": 46.352813742385706
             },
             {
                 "description": "VirtualBox VM",
