@@ -252,6 +252,13 @@
                 "description": "Link from win 7 port Ethernet0 to S3 port FastEthernet1/12",
                 "destination_node_id": 74,
                 "destination_port_id": 673,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f1/12",
+                    "x": 56.15869886285407,
+                    "y": 54.614025617510634
+                },
                 "id": 12,
                 "source_node_id": 87,
                 "source_port_id": 725,
