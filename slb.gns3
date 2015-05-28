@@ -205,28 +205,6 @@
                 }
             },
             {
-                "description": "Link from win 7 port Ethernet0 to S3 port FastEthernet1/12",
-                "destination_node_id": 74,
-                "destination_port_id": 673,
-                "destination_port_label": {
-                    "color": "#000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f1/12",
-                    "x": 54.049385361999384,
-                    "y": 56.013576346542095
-                },
-                "id": 12,
-                "source_node_id": 87,
-                "source_port_id": 725,
-                "source_port_label": {
-                    "color": "#000000",
-                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "e0",
-                    "x": 11.450614638000673,
-                    "y": -4.513576346542095
-                }
-            },
-            {
                 "description": "Link from S1 port FastEthernet1/0 to S3 port FastEthernet0/0",
                 "destination_node_id": 74,
                 "destination_port_id": 677,
@@ -511,6 +489,28 @@
                     "x": 49.99505531143632,
                     "y": -6.471141761831575
                 }
+            },
+            {
+                "description": "Link from win 7 port Ethernet0 to R4 port FastEthernet0/1",
+                "destination_node_id": 32,
+                "destination_port_id": 333,
+                "destination_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "f0/1",
+                    "x": 12.533652378380935,
+                    "y": 56.36755177534542
+                },
+                "id": 29,
+                "source_node_id": 87,
+                "source_port_id": 725,
+                "source_port_label": {
+                    "color": "#000000",
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
+                    "text": "e0",
+                    "x": 52.96634762161909,
+                    "y": -4.867551775345419
+                }
             }
         ],
         "nodes": [
@@ -537,8 +537,11 @@
                     },
                     {
                         "adapter_number": 0,
+                        "description": "connected to win 7 on port Ethernet0",
                         "id": 333,
+                        "link_id": 29,
                         "name": "FastEthernet0/1",
+                        "nio": "NIO_UDP",
                         "port_number": 1
                     }
                 ],
@@ -905,8 +908,8 @@
                 "server_id": 2,
                 "type": "C7200",
                 "vm_id": "77637497-34ef-4335-b668-d7354b972286",
-                "x": -261.2598846298226,
-                "y": -202.26345596729058
+                "x": -291.2598846298225,
+                "y": -202.26345596729055
             },
             {
                 "description": "Router c3745",
@@ -1015,11 +1018,8 @@
                     },
                     {
                         "adapter_number": 1,
-                        "description": "connected to win 7 on port Ethernet0",
                         "id": 673,
-                        "link_id": 12,
                         "name": "FastEthernet1/12",
-                        "nio": "NIO_UDP",
                         "port_number": 12
                     },
                     {
@@ -1419,9 +1419,9 @@
                 "ports": [
                     {
                         "adapter_number": 0,
-                        "description": "connected to S3 on port FastEthernet1/12",
+                        "description": "connected to R4 on port FastEthernet0/1",
                         "id": 725,
-                        "link_id": 12,
+                        "link_id": 29,
                         "name": "Ethernet0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1710,6 +1710,18 @@
                         "name": "FastEthernet0/1",
                         "nio": "NIO_UDP",
                         "port_number": 1
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 921,
+                        "name": "FastEthernet1/0",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 1,
+                        "id": 922,
+                        "name": "FastEthernet1/1",
+                        "port_number": 1
                     }
                 ],
                 "properties": {
@@ -1722,6 +1734,7 @@
                     "nvram": 512,
                     "private_config": "configs/i8_private-config.cfg",
                     "slot0": "C7200-IO-2FE",
+                    "slot1": "PA-2FE-TX",
                     "startup_config": "configs/i8_startup-config.cfg"
                 },
                 "server_id": 2,
