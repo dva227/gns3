@@ -491,25 +491,25 @@
                 }
             },
             {
-                "description": "Link from win 7 port Ethernet0 to R4 port FastEthernet0/1",
-                "destination_node_id": 32,
-                "destination_port_id": 333,
+                "description": "Link from ISP2 port FastEthernet1/0 to win 7 port Ethernet0",
+                "destination_node_id": 87,
+                "destination_port_id": 725,
                 "destination_port_label": {
                     "color": "#000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "f0/1",
-                    "x": 12.533652378380935,
-                    "y": 56.36755177534542
+                    "text": "e0",
+                    "x": -7.483526355816508,
+                    "y": 28.352123633082613
                 },
-                "id": 29,
-                "source_node_id": 87,
-                "source_port_id": 725,
+                "id": 35,
+                "source_node_id": 30,
+                "source_port_id": 921,
                 "source_port_label": {
                     "color": "#000000",
                     "font": "TypeWriter,10,-1,5,75,0,0,0,0,0",
-                    "text": "e0",
-                    "x": 52.96634762161909,
-                    "y": -4.867551775345419
+                    "text": "f1/0",
+                    "x": 72.98352635581651,
+                    "y": 23.147876366917387
                 }
             }
         ],
@@ -537,11 +537,8 @@
                     },
                     {
                         "adapter_number": 0,
-                        "description": "connected to win 7 on port Ethernet0",
                         "id": 333,
-                        "link_id": 29,
                         "name": "FastEthernet0/1",
-                        "nio": "NIO_UDP",
                         "port_number": 1
                     }
                 ],
@@ -1419,9 +1416,9 @@
                 "ports": [
                     {
                         "adapter_number": 0,
-                        "description": "connected to R4 on port FastEthernet0/1",
+                        "description": "connected to ISP2 on port FastEthernet1/0",
                         "id": 725,
-                        "link_id": 29,
+                        "link_id": 35,
                         "name": "Ethernet0",
                         "nio": "NIO_UDP",
                         "port_number": 0
@@ -1437,8 +1434,8 @@
                 "server_id": 2,
                 "type": "VirtualBoxVM",
                 "vm_id": "8b0c725b-6fb4-49b9-9372-065a39a58547",
-                "x": -472.3204178980326,
-                "y": 152.93354954612914
+                "x": -161.7375900532362,
+                "y": -362.48484809834997
             },
             {
                 "description": "Router c3745",
@@ -1713,8 +1710,11 @@
                     },
                     {
                         "adapter_number": 1,
+                        "description": "connected to win 7 on port Ethernet0",
                         "id": 921,
+                        "link_id": 35,
                         "name": "FastEthernet1/0",
+                        "nio": "NIO_UDP",
                         "port_number": 0
                     },
                     {
